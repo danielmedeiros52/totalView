@@ -10,11 +10,11 @@ proxima batida de ponto, em uma div menor logo a baixo da jornada atual deverá 
 mostrando a escala executada e a previsao para os proximos dias da semana.
 
 Deverá ter um menu lateral contendo a foto do usuario e mais os menus de navegaçao:
-                       --> home </br>
-                        --> solicitar troca
-                        --> solicitar folga
-                        --> calendario 
-                        --> configuração
+                    </br>   --> home </br>
+                       --> solicitar troca</br>
+                        --> solicitar folga</br>
+                        --> calendario </br>
+                        --> configuração</br>
        <b>Home</b>
            
                Ao clicar em home deve ir para a tela inicial 
