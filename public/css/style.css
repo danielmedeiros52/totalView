@@ -17,7 +17,8 @@
   left: 50%;
   top: 50%;
   height: 260px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 28px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", "sans-serif";
   width: 27rem;
   background-color: #003166;
 }
@@ -33,7 +34,7 @@
 
 .container-login-campos {
   margin: 8px;
-  margin-top: 16px;
+  margin-top: 0px;
 }
 
 #entrar {
