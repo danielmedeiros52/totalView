@@ -1,15 +1,19 @@
 .container-login{
     border-radius: 15px;
+    border: solid 1px rgb(204, 200, 200);
+    box-shadow: 2px 2px 7px black ;
     float: none;
     position: absolute;
     left: 50%;
     top: 50%;
-    background-color: #191970;
-    height: 240px;
+    height: 260px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    width: 27rem;
+    background-color: hsl(211, 100%, 20%) ;
     
     }
+
+
     .titulo-login{
     padding-left: 20px;
     padding-top: 4px;
@@ -20,11 +24,19 @@
     
     }
     .container-login-campos{
-    background-color: whitesmoke;
-    height: 120px;;
+    margin: 8px;
+    margin-top: 16px;
     
     }
+#entrar{
+margin-top: 13px;
+}
+#inputPassword{
+  margin-top: 16px;
 
+
+
+}
 //
 // Color system
 //
@@ -55,7 +67,7 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
-$blue:    #007bff !default;
+$blue:    hsl(211, 100%, 20%) !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -83,8 +95,8 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
+$primary:       $blue!default;
+$secondary:     $white!default;     //$gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
