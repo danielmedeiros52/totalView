@@ -1,0 +1,33 @@
+{
+  "name": "totalview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "sass": "sass public/css/style.scss public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielmedeiros52/totalView.git"
+  },
+  "author": "Daniel Medeiros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielmedeiros52/totalView/issues"
+  },
+  "homepage": "https://github.com/danielmedeiros52/totalView#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "mysql": "^2.15.0",
+    "pg": "^7.4.3",
+    "pg-promise": "^8.4.4",
+    "popper.js": "^1.14.3",
+    "sass": "^1.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
