@@ -1,4 +1,13 @@
 @charset "UTF-8";
+.body-index {
+  background-image: url("../img/img-05-10-2016-57f54a1d0ee28.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: invert(100%) blur(5px) saturate(5);
+  width: 100%;
+  height: 100%;
+}
+
 .container-login {
   border-radius: 15px;
   border: solid 1px #ccc8c8;
