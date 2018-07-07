@@ -14,13 +14,17 @@
   box-shadow: 2px 2px 7px black;
   float: none;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 35%;
+  top: 40%;
   height: 260px;
   font-size: 28px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", "sans-serif";
   width: 27rem;
   background-color: #003166;
+}
+
+.icon-login {
+  background-image: url("../img/calendar-icon.png");
 }
 
 .titulo-login {
