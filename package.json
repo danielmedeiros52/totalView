@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/danielmedeiros52/totalView#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "bootstrap": "^4.1.1",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
