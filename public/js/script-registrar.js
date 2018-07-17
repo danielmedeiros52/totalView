@@ -26,7 +26,7 @@ $(document).ready(function () {
             }
             $.ajax({
                 type: 'POST',
-                url: '/registro/salvar',
+                url: '/registro',
                 data: data,
                 complete: function (jqXHR, textStatus) {
                    if(jqXHR.responseJSON.rowCount>0){

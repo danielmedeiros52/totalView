@@ -6,7 +6,7 @@ module.exports = function (app) {
         res.render('inscricao')
     })
 
-    app.post('/registro/salvar', (req, res) => {
+    app.post('/registro', (req, res) => {
         const pool = app.infra.connectionFactory()
         var UsuarioDAO = new app.infra.UsuarioDAO(pool)
         var user = req.body

@@ -5,7 +5,15 @@ $(document).ready(function () {
             'login': $('#inputLogin').val(),
             'senha': $('#inputPassword').val()
         }
-        $.post('/', data)
+        $.ajax({
+            url:'/', 
+            type:'POST',
+            data:data,
+            complete: function(jqXHR , textStatus){
+                console.log(jqXHR)
+            }
+        
+        })
     })
 
     $('#novo-cadastro').on('click', function () {
