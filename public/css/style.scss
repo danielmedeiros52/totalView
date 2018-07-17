@@ -34,7 +34,14 @@ height: 100%;
     size:18px;
     text-align: left;
     
-    
+    #novo-cadastro{
+     height: 30px;
+     width:30;
+     position: relative ;
+     left: 220;
+     filter:invert(100%);
+     cursor: pointer;
+    }
     
     }
     .container-login-campos{
@@ -51,6 +58,41 @@ margin-top: 13px;
 
 
 }
+// aqui comeca a tela de cadastro de usuario (registre-se)
+#container-form-cadastro{
+  border-radius: 15px;
+  border: solid 1px rgb(204, 200, 200);
+  box-shadow: 2px 2px 7px black ;
+  height: 80%;
+  width: 50rem;
+  float: none;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+  background-color: hsl(0, 0%, 100%) ;
+
+}
+.registre-se{
+
+font-size: 24px;
+font-style: bold;
+position: relative ;
+left: 550;
+
+}
+.campos{
+  margin-top:40px;
+}
+
+.seta-voltar{
+  width:30;
+  
+  cursor: pointer;
+}
+
+
+
 //
 // Color system
 //

@@ -15,7 +15,9 @@ module.exports = function (app) {
 
         loginDAO.logar([user.login], (err, resultado) => {
            console.log(err)
-           console.log(resultado)
+           console.log({lista:resultado.rowCount})
+
+           console.log({lista:resultado.rows})
         })
     })
 

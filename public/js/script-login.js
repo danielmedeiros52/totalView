@@ -6,11 +6,9 @@ $(document).ready(function () {
             'senha': $('#inputPassword').val()
         }
         $.post('/', data)
+    })
 
-
-        
-
-
-
+    $('#novo-cadastro').on('click', function () {
+          window.location='registro'
     })
 });

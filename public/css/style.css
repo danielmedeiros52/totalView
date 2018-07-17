@@ -35,6 +35,14 @@
   size: 18px;
   text-align: left;
 }
+.titulo-login #novo-cadastro {
+  height: 30px;
+  width: 30;
+  position: relative;
+  left: 220;
+  filter: invert(100%);
+  cursor: pointer;
+}
 
 .container-login-campos {
   margin: 8px;
@@ -47,6 +55,36 @@
 
 #inputPassword {
   margin-top: 16px;
+}
+
+#container-form-cadastro {
+  border-radius: 15px;
+  border: solid 1px #ccc8c8;
+  box-shadow: 2px 2px 7px black;
+  height: 80%;
+  width: 50rem;
+  float: none;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", "sans-serif";
+  background-color: white;
+}
+
+.registre-se {
+  font-size: 24px;
+  font-style: bold;
+  position: relative;
+  left: 550;
+}
+
+.campos {
+  margin-top: 40px;
+}
+
+.seta-voltar {
+  width: 30;
+  cursor: pointer;
 }
 
 /*!
