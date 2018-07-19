@@ -3,6 +3,10 @@
 .fa-2x {
   font-size: 2em;
 }
+body{
+  margin: 0;
+  padding: 0;
+}
 
 .fa {
   position: relative;
@@ -25,7 +29,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  height: 100%;
+  /* height: 100%; */
   left: 0;
   width: 60px;
   overflow: hidden;
@@ -114,6 +118,12 @@ nav ul, nav li {
   color: #fff;
   background-color: #5fa2db;
 }
+.area{
+  background-image: url("../img/full-bloom.png");
+  width: 100%;
+  height: 100%; 
+
+  }
 
 @font-face {
   font-family: "Titillium Web";
