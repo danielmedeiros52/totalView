@@ -27,12 +27,13 @@ ul {
 
     .profile-card {
         background-image: url('../img/zig-zag-wool.png');
-        width: 100%;
+        width: 98%;
         height:260px;
         font: 12px "Myriad Pro";
-        top: 0%;
+        top: 0;
         position: absolute;
         float: none;
+        left: 2%;
 
     }
 

@@ -87,6 +87,16 @@
   cursor: pointer;
 }
 
+.content{
+  width: 98%;
+  font: 12px "Myriad Pro";
+  bottom:0;
+  left: 2%;
+  position: absolute;
+
+}
+
+
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
