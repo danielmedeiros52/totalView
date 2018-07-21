@@ -2,76 +2,17 @@
 
 <head>
 </head>
+<script src='/js/jquery-3.3.1.js' type="text/javascript"></script>
+<link href="/css/perfil-usuario.css" rel="stylesheet" />
+<link href="/css/style.css" rel="stylesheet" />
+<script src='/js/perfil-usuario.js' type="text/javascript"></script>
 <link href="/css/index.css" rel="stylesheet" />
-
 <body>
-    <div class="area"></div>
-    <nav class="main-menu">
-        <ul>
-            <li>
-                <a href="http://justinfarrow.com">
-                    <i class="fa fa-home fa-2x"></i>
-                    <span class="nav-text">
-                        Dashboard
-                    </span>
-                </a>
-
-            </li>
-            <li class="has-subnav">
-                <a href="#">
-                    <i class="fa fa-calendar fa-2x"></i>
-                    <span class="nav-text">
-
-                        Calendário
-                    </span>
-                </a>
-
-            </li>
-            <li class="has-subnav">
-                <a href="#">
-                    <i class="fa fa-exchange fa-2x"></i>
-                    <span class="nav-text">
-                        Solicitar troca
-                    </span>
-                </a>
-
-            </li>
-            <li class="has-subnav">
-                <a href="#">
-                    <i class="fa fa-check-square-o fa-2x"></i>
-                    <span class="nav-text">
-                        Solicitar folga
-                    </span>
-                </a>
-
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-cog fa-2x"></i>
-                    <span class="nav-text">
-                        Configuração
-                    </span>
-                </a>
-            </li>
-
-
-        </ul>
-
-        <ul class="logout">
-            <li>
-                <a href="#">
-                    <i class="fa fa-power-off fa-2x"></i>
-                    <span class="nav-text">
-                        Logout
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-
-
-    <%- include('teste'); -%>
- 
+        
+    <%- include('side-nav'); -%>
+    <%- include('perfil-user'); -%>
+    <%- include('week-card'); -%>
+    
 </body>
 
 </html>
