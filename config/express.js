@@ -11,12 +11,22 @@ module.exports = function () {
     app.use(bodyParser.urlencoded({ extended: true }))
     app.use(express.static('public'))
     app.use(session({
-        secret: 'totalView', 
+        secret: 'totalView',
         saveUninitialized: true,
-        resave:'true'
+        resave: 'true'
     }))
+  
+    app.use((req, res, next) => {
+       if(req.session.user){
+           res.locals.user = req.session.user
+       }
+       
+        next()
+    })
+
     load('routes', { cwd: 'app' })
         .then('infra')
         .into(app)
+ 
     return app
 }

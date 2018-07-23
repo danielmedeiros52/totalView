@@ -1,14 +1,13 @@
 function UsuarioDAO(connection){
     this._connection=connection
 }
+// CREATE TABLE  usuario(
 
-// CREATE TABLE public.usuario
-// (
-//     id integer NOT NULL DEFAULT nextval('usuario_id_seq'::regclass),
-//     nome character varying(30) COLLATE pg_catalog."default" NOT NULL,
-//     login character varying(10) COLLATE pg_catalog."default" NOT NULL,
-//     senha character varying(10) COLLATE pg_catalog."default" NOT NULL,
-//     email character varying(20) COLLATE pg_catalog."default"
+//     id serial NOT NULL  ,
+//     nome character varying(30)  NOT NULL,
+//     login character varying(10)  NOT NULL,
+//     senha character varying(10)  NOT NULL,
+//     email character varying(20)  NOT NULL
 // )
 
 UsuarioDAO.prototype.inserir = function(data,callback){
