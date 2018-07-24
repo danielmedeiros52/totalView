@@ -4,7 +4,6 @@
 </head>
 
 <script src='/js/jquery-3.3.1.js' type="text/javascript"></script>
-<%if(user){%>
 <link href="/css/style.css" rel="stylesheet" />
 <link href="/css/index.css" rel="stylesheet" />
 <body>
@@ -13,10 +12,6 @@
         <%- include('side-nav'); -%>
             <%- include('perfil-user'); -%>
                 <%- include('real-time'); -%>
-    <%} else{%>
-            <%- include('error/404'); -%>
-    <%}%>
-
 </body>
 
 </html>
