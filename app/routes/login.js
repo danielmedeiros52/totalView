@@ -1,11 +1,9 @@
 
 module.exports = function (app) {
-
-
+    
     app.get('/', (req, res) => {
         res.render('index')
     })
-
     app.post('/', (req, res) => {
         const pool = app.infra.connectionFactory()
         var loginDAO = new app.infra.LoginDAO(pool)
@@ -33,5 +31,11 @@ module.exports = function (app) {
         })
     })
 
-
+    app.get('*', function(req, res){
+        res.locals.error = {
+            cod:'404',
+            mensagem:'Página não encontrada!'
+        }
+       res.render('error/error') 
+      });
 }

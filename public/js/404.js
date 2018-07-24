@@ -1,10 +1,10 @@
-$( document ).ready(function() {
-    redirect()
+// $( document ).ready(function() {
+//     redirect()
 
 
-});
+// });
 
 
-function redirect() {
-   setTimeout(function(){ window.location='/' }, 5000);
-}
+// function redirect() {
+//    setTimeout(function(){ window.location='/' }, 5000);
+// }
