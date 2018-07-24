@@ -25,7 +25,7 @@ module.exports = function (app) {
                 res.send('/dashboard')
 
             } else {
-                res.send('Login ou senha invalido!')
+                res.send('Erro, login ou senha invalido!')
             }
 
 
