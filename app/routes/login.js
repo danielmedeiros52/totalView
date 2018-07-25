@@ -1,6 +1,8 @@
 
 module.exports = function (app) {
-    
+    app.get('/registro', (req, res) => {
+        res.render('inscricao')
+    })
     app.get('/', (req, res) => {
         res.render('index')
     })
