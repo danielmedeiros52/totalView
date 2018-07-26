@@ -4,7 +4,7 @@ module.exports = function (app) {
         res.render('inscricao')
     })
     app.get('/', (req, res) => {
-        res.render('teste')
+        res.render('login')
     })
     app.post('/', (req, res) => {
         const pool = app.infra.connectionFactory()

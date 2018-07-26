@@ -3,19 +3,37 @@
 	margin: 0;
 	padding: 0;
 	vertical-align: baseline;
-	box-sizing: border-box;
 	border: 0;
 	outline: 0;
+	overflow: hidden;
 }
 
+.teste{
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 3;
+	left: 0;
+}
+
+#particle-canvas {
+    position: absolute;
+    width: 100%;
+	height: 100%;
+	z-index:2;
+  }
 
 /* General */
 .container {
 	width: 100%;
 	font-family: Roboto, sans-serif;
     position: absolute;
-    background: #3b4465;
-    top: 0;
+    background:transparent;
+    top: 20%;
+	z-index:4;
+overflow: unset;
     
 }
 
@@ -37,7 +55,10 @@ form {
 	height: 280px;
 	padding: 20px;
 	background: #d7e7f1;
-	border-radius: 5px;
+	border-radius: 15px;
+	-webkit-box-shadow: 6px 9px 15px -1px rgba(0,0,0,0.61);
+	-moz-box-shadow: 6px 9px 15px -1px rgba(0,0,0,0.61);
+	box-shadow: 6px 9px 15px -1px rgba(0,0,0,0.61);
 }
 
 form label, form input {
@@ -60,14 +81,17 @@ label {
 
 input:not([type="submit"]) {
 	width: 220px;
-	margin: 5px auto 0;
+	margin: 5px auto;
 	padding: 0 15px;
 	line-height: 40px;
 	font-size: 14px;
 	color: #3b4465;
 	background: #eef9fe;
 	border: 1px solid #cddbef;
-	border-radius: 2px;
+	border-radius: 5px;
+	-webkit-box-shadow: 1px 9px 12px -11px rgba(0,0,0,0.8);
+	-moz-box-shadow: 1px 9px 12px -11px rgba(0,0,0,0.8);
+	box-shadow: 1px 9px 12px -11px rgba(0,0,0,0.8);
 }
 
 input[type="submit"] {
@@ -88,28 +112,28 @@ input[type="submit"] {
 	justify-content: center;
 	width: 550px;
 	margin: 0 auto;
+	height: 600px;
+	overflow: hidden;
+
 }
 
 .buttons {
 	height: 100px;
-	padding-top: 70px;
 	text-align: center;
 }
 
-.forms {
-  padding-top: 50px;
-}
+
 
 .log-link,
 .sign-link {
   cursor: pointer;
-  color: #bbb;
+  color: #FFFFFF;
 }
 
 .log-link.login-button-active,
 .sign-link.signup-button-active {
   cursor: default;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .login-underline,
@@ -163,13 +187,16 @@ input[type="submit"] {
 
 .login-form input[type="submit"] {
 	color: #fbfdff;
-	background: #a7e245;
+	/* background: #a7e245; */
+	background: #7d7e83;
+	cursor:pointer;
 }
 
 .signup-form input[type="submit"] {
-	color: #a7e245;
+	color: #7d7e83;
 	background: #fbfdff;
-	box-shadow: inset 0 0 0 2px #a7e245;
+	box-shadow: inset 0 0 0 2px #7d7e83;
+	cursor:pointer;
 }
 
 .login-form {
@@ -300,7 +327,7 @@ input[type="submit"] {
 	}
   
 	100% {
-		transform: translate(100px, 20px);
+		transform: translate(150px, 20px);
 		z-index: 1;
 		background-color: #d7e7f1;
 	}
@@ -350,7 +377,7 @@ input[type="submit"] {
 	}
   
 	100% {
-		transform: translate(100px);
+		transform: translate(150px);
 		z-index: 10;
 		background-color: #fff;
 	}
@@ -379,19 +406,13 @@ input[type="submit"] {
 	100% {
 		transform: translate(-100px);
 		z-index: 10;
-		height: 360px;
+		height: 480px;
 		background-color: #fff;
+		-webkit-box-shadow: -12px 10px 22px -6px rgba(0,0,0,0.72);
+		-moz-box-shadow: -12px 10px 22px -6px rgba(0,0,0,0.72);
+		box-shadow: -12px 10px 22px -6px rgba(0,0,0,0.72);
 	}
 }
 
-#particle-canvas {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-  }
-  canvas {
-    display: block;
-    vertical-align: bottom;
-  }
+  
   
