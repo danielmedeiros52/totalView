@@ -2,7 +2,7 @@
 module.exports = function (app) {
     
     app.get('/', (req, res) => {
-        res.render('index')
+        res.render('teste')
     })
     app.post('/', (req, res) => {
         const pool = app.infra.connectionFactory()
