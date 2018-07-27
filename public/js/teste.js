@@ -1,6 +1,6 @@
 var buttons = document.querySelector('.buttons');
 var loginButton = document.querySelector('.log-link');
-var signupButton = document.querySelector('.sign-link');
+var signupButton = document.querySelector('#sing');
 var activeElements = document.querySelectorAll('[data-action="animated"]');
 
 buttons.addEventListener('click', switcher);

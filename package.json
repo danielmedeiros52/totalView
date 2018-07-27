@@ -30,7 +30,7 @@
     "pg": "^7.4.3",
     "pg-promise": "^8.4.4",
     "popper.js": "^1.14.3",
-    "sass": "^1.5.1"
+    "sass": "^1.10.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.3"
