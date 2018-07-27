@@ -1,137 +1,3 @@
-.the-arrow {
-  width: 40px;
-  transition: all 0.2s;
-}
-.the-arrow.-left {
-  position: absolute;
-  top: 30%;
-  left: 0;
-}
-.the-arrow.-left > .shaft {
-  width: 0;
-  background-color: #c8dfed;
-}
-.the-arrow.-left > .shaft:before, .the-arrow.-left > .shaft:after {
-  width: 0;
-  background-color: #c8dfed;
-}
-.the-arrow.-left > .shaft:before {
-  transform: rotate(0);
-}
-.the-arrow.-left > .shaft:after {
-  transform: rotate(0);
-}
-.the-arrow.-right {
-  top: 3px;
-}
-.the-arrow.-right > .shaft {
-  width: 64px;
-  transition-delay: 0.2s;
-}
-.the-arrow.-right > .shaft:before, .the-arrow.-right > .shaft:after {
-  width: 8px;
-  transition-delay: 0.3s;
-  transition: all 0.5s;
-}
-.the-arrow.-right > .shaft:before {
-  transform: rotate(40deg);
-}
-.the-arrow.-right > .shaft:after {
-  transform: rotate(-40deg);
-}
-.the-arrow > .shaft {
-  background-color: #c8dfed;
-  display: block;
-  height: 1px;
-  position: relative;
-  transition: all 0.2s;
-  transition-delay: 0;
-  will-change: transform;
-}
-.the-arrow > .shaft:before, .the-arrow > .shaft:after {
-  background-color: #c8dfed;
-  content: "";
-  display: block;
-  height: 1px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: all 0.2s;
-  transition-delay: 0;
-}
-.the-arrow > .shaft:before {
-  transform-origin: top right;
-}
-.the-arrow > .shaft:after {
-  transform-origin: bottom right;
-}
-
-.animated-arrow {
-  display: inline-block;
-  color: #c8dfed;
-  font-size: 1.25em;
-  font-style: italic;
-  text-decoration: none;
-  position: relative;
-  transition: all 0.2s;
-  height: 30px;
-top:50;
-}
-
-/* AAAAAAAAA */
-.animated-arrow:hover {
-  color: #f6ffd4;
-}
-.animated-arrow:hover > .the-arrow.-left > .shaft {
-  width: 64px;
-  transition-delay: 0.1s;
-  background-color: #f6ffd4;
-}
-.animated-arrow:hover > .the-arrow.-left > .shaft:before, .animated-arrow:hover > .the-arrow.-left > .shaft:after {
-  width: 8px;
-  transition-delay: 0.1s;
-  background-color: #f6ffd4;
-}
-.animated-arrow:hover > .the-arrow.-left > .shaft:before {
-  transform: rotate(40deg);
-}
-.animated-arrow:hover > .the-arrow.-left > .shaft:after {
-  transform: rotate(-40deg);
-}
-.animated-arrow:hover > .main {
-  transform: translateX(80px);
-}
-.animated-arrow:hover > .main > .the-arrow.-right > .shaft {
-  width: 0;
-  transform: translateX(200%);
-  transition-delay: 0;
-}
-.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
-  width: 0;
-  transition-delay: 0;
-  transition: all 0.1s;
-}
-.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
-  transform: rotate(0);
-}
-.animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
-  transform: rotate(0);
-}
-.animated-arrow > .main {
-  display: flex;
-  align-items: center;
-  transition: all 0.2s;
-}
-.animated-arrow > .main > .text {
-  margin: 0 16px 0 0;
-  line-height: 1;
-}
-.animated-arrow > .main > .the-arrow {
-  position: relative;
-}
-
-/*# sourceMappingURL=teste.css.map */
-/* Reset */
 * {
 	margin: 0;
 	padding: 0;
@@ -160,10 +26,11 @@ top:50;
 /* General */
 .container {
 	width: 100%;
+	height: 100%;
 	font-family: Roboto, sans-serif;
     position: absolute;
     background:transparent;
-    top: 20%;
+    top: 0;
 	z-index:4;
 overflow: unset;
     
@@ -182,10 +49,10 @@ button {
 form {
   position: relative;
   float: none;
-
 	width: 260px;
-	height: 280px;
+	height: 360px;
 	padding: 20px;
+	margin-top: 40%;
 	background: #d7e7f1;
 	border-radius: 15px;
 	-webkit-box-shadow: 6px 9px 15px -1px rgba(0,0,0,0.61);
@@ -237,6 +104,7 @@ input[type="submit"] {
 
 
 /* Buttons and Inputs */
+
 .buttons,
 .forms {
 	display: flex;
@@ -244,13 +112,16 @@ input[type="submit"] {
 	justify-content: center;
 	width: 550px;
 	margin: 0 auto;
-	height: 600px;
 	overflow: hidden;
+	position: absolute;
+	height: 100%;
+	left:30%;
+	
 
 }
 
 .buttons {
-	height: 100px;
+	height: 100%;
 	text-align: center;
 }
 
@@ -259,13 +130,11 @@ input[type="submit"] {
 .log-link,
 .sign-link {
   cursor: pointer;
-  color: #FFFFFF;
 }
 
 .log-link.login-button-active,
 .sign-link.signup-button-active {
   cursor: default;
-  color: #FFFFFF;
 }
 
 .login-underline,
@@ -276,7 +145,6 @@ input[type="submit"] {
 	height: 2px;
 	width: 100px;
 	opacity: 0;
-	background: #c8dfed;
 }
 
 .login-underline.login-button-active {
@@ -332,7 +200,7 @@ input[type="submit"] {
 }
 
 .login-form {
-  animation: loginToBottom .4s linear forwards;
+	animation: loginToBottom .4s linear forwards;
 }
 
 .signup-form {
@@ -548,3 +416,139 @@ input[type="submit"] {
 
   
   
+.the-arrow {
+  width: 40px;
+  transition: all 0.2s;
+  
+}
+.the-arrow.-left {
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+.the-arrow.-left > .shaft {
+  width: 0;
+  background-color: #000000;
+  
+}
+.the-arrow.-left > .shaft:before, .the-arrow.-left > .shaft:after {
+  width: 0;
+  background-color: #000000;
+}
+.the-arrow.-left > .shaft:before {
+  transform: rotate(0);
+}
+.the-arrow.-left > .shaft:after {
+  transform: rotate(0);
+}
+.the-arrow.-right {
+  top: 3px;
+}
+.the-arrow.-right > .shaft {
+  width: 40px;
+  transition-delay: 0.2s;
+}
+.the-arrow.-right > .shaft:before, .the-arrow.-right > .shaft:after {
+  width: 10px;
+  transition-delay: 0.3s;
+  transition: all 0.5s;
+}
+.the-arrow.-right > .shaft:before {
+  transform: rotate(40deg);
+}
+.the-arrow.-right > .shaft:after {
+  transform: rotate(-40deg);
+}
+.the-arrow > .shaft {
+  background-color: #444444;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: all 0.1s;
+  transition-delay: 0;
+  will-change: transform;
+}
+.the-arrow > .shaft:before, .the-arrow > .shaft:after {
+  background-color: #444444;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.1s;
+  transition-delay: 0;
+  
+}
+.the-arrow > .shaft:before {
+  transform-origin: top right;
+}
+.the-arrow > .shaft:after {
+  transform-origin: bottom right;
+}
+
+.animated-arrow {
+  display: inline-block;
+  color: #444444;
+  font-size: 1.15em;
+  font-style: italic;
+  position: relative;
+  transition: all 0.2s;
+  height: 30px;
+top:27;
+cursor: pointer;
+}
+
+.animated-arrow:hover {
+  color:#7d7e83;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft {
+  width: 64px;
+  transition-delay: 0.1s;
+  background-color: #7d7e83;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before, .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  width: 8px;
+  transition-delay: 0.1s;
+  background-color: #7d7e83;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before {
+  transform: rotate(40deg);
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  transform: rotate(-40deg);
+}
+.animated-arrow:hover > .main {
+  transform: translateX(80px);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft {
+  width: 0;
+  transform: translateX(200%);
+  transition-delay: 0;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  width: 0;
+  transition-delay: 0;
+  transition: all 0.1s;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
+  transform: rotate(0);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  transform: rotate(0);
+}
+.animated-arrow > .main {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+.animated-arrow > .main > .text {
+  margin: 0 16px 0 0;
+  line-height: 1;
+}
+.animated-arrow > .main > .the-arrow {
+  position: relative;
+}
+
+/*# sourceMappingURL=teste.css.map */
+/* Reset */

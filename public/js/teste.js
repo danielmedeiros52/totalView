@@ -1,23 +1,41 @@
-var buttons = document.querySelector('.buttons');
-var loginButton = document.querySelector('.log-link');
-var signupButton = document.querySelector('#sing');
-var activeElements = document.querySelectorAll('[data-action="animated"]');
 
-buttons.addEventListener('click', switcher);
 
-function switcher(e) {
-  if(e.target == loginButton) {
-    for (var i = 0; i < activeElements.length; i++) {
-      activeElements[i].classList.remove('signup-button-active');
-      activeElements[i].classList.add('login-button-active');
-    }
-  } else if(e.target == signupButton) {
-    for (var i = 0; i < activeElements.length; i++) {
-      activeElements[i].classList.remove('login-button-active');
-      activeElements[i].classList.add('signup-button-active');
-    }
-  }
+$(document).ready(()=>{
+    $('#sing').on('click',singUp)
+    $('#form-singUp').on('click',singUp)
+    $('#login').on('click',login)
+})
+
+const singUp = ()=>{
+  $('#form-singUp').addClass('signup-button-active')
+  $('#login').removeClass('login-button-active')
+  $('#sing').hide();
 }
+
+const login =()=>{
+  $('#login').addClass('login-button-active')
+  $('#form-singUp').removeClass('signup-button-active')
+  $('#log').html('')
+  $('#sing').show(500);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Initialisation
 var canvasDiv = document.getElementById('particle-canvas');
