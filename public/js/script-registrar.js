@@ -1,9 +1,7 @@
 $(document).ready(function () {
 
 
-    $('#seta-voltar').on('click', function () {
-        window.location = '/'
-    })
+
     $('#cadastrar').on('click', function () {
         if ($('#input-senha').val() != $('#input-resenha').val()) {
             alert('As senhas nao conferem!')

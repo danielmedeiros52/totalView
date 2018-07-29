@@ -1,8 +1,8 @@
-<link href="/css/teste.css" rel="stylesheet" />
+<link href="/css/login.css" rel="stylesheet" />
 <script src='/js/jquery-3.3.1.js' type="text/javascript"></script>
 
 <body>
-	<div class="teste"></div>
+	<div class="malha"></div>
 	<div id="particle-canvas"></div>
 
 	<div class=container>
@@ -13,54 +13,47 @@
 			<div class="buttons " data-action="animated">
 			</div>
 			<div class="forms">
-				<form class="login-form login-button-active" action="#" method="post" data-action="animated" id='login'>
+							<span class='animated-arrow-login '   id="voltar-login">Voltar para o Login.</span>
+
+				<form class="login-form login-button-active" method="post" data-action="animated" id='login'>
 					<fieldset>
-						<label for="login-email">E-mail</label>
-						<input id="login-email" type="email" name="email" required>
-						<label for="login-password">Senha</label>
-						<input id="login-password" type="password" name="password" required>
+						<label for="inputLogin">E-mail</label>
+						<input id="inputLogin" type="text" name="user" required>
+						<label for="inputPassword">Senha</label>
+						<input id="inputPassword" type="password" name="password" required>
 						
 					</fieldset>
 					
-					<input type="submit" value="Entrar">
-						<a class='animated-arrow '  id='sing'  data-action="animated">
-							<span class='the-arrow -left '>
-								<span class='shaft'></span>
-							</span>
-							<span class='main'>
-								<span class='text' data-action="animated">
-									Faça seu cadastro
-								</span>
-								<span class='the-arrow -right'>
-									<span class='shaft'></span>
-								</span>
-							</span>
-						</a>
-
+					<input type="submit" value="Entrar" id="entrar">
+	
+	
 			
 				</form>
-				<form class="signup-form " action="#" method="post" data-action="animated" id="form-singUp">
+				
+				<form class="signup-form "  method="post" data-action="animated" id="form-singUp">
 					<fieldset>
 						<legend>Please, enter your email, password and password confirmation for sign up.</legend>
-						<label for="signup-email">Nome:</label>
-						<input type="text" required>
-						<label for="signup-email">Cpf:</label>
-						<input type="text" required>
-						<label for="signup-email">Email:</label>
-						<input id="signup-email" type="email" name="email" required>
-						<label for="signup-password">Password</label>
-						<input id="signup-password" type="password" name="password" required>
-						<label for="signup-confirm-password">Confirm password</label>
-						<input id="signup-confirm-password" type="password" name="password" required>
+						<label for="input-nome">Nome:</label>
+						<input type="text"  id="input-nome" required>
+						<label for="input-cpf">Cpf:</label>
+						<input type="text" id="input-cpf"required>
+						<label for="input-email">Email:</label>
+						<input id="input-email" type="email" name="email" required>
+						<label for="input-senha">Password</label>
+						<input id="input-senha" type="password" name="password" required>
+						<label for="input-resenha'">Confirm password</label>
+						<input id="input-senha" type="password" name="password" required>
 					</fieldset>
-					<input type="submit" value="Continue">
+				
+					<input type="submit" value="Registrar" id="cadastrar">
 				
 
 				</form>
+				<span class='animated-arrow '  style='display:none' id="sing">Faça seu cadastro!</span>
 			</div>
 		</main>
 
 	</div>
 </body>
 <script src='/js/particles.min.js' type="text/javascript"></script>
-<script src='/js/teste.js' type="text/javascript"></script>
+<script src='/js/script-login.js' type="text/javascript"></script>
