@@ -1,9 +1,9 @@
 $(document).ready(function () {
     login()
-    $('#sing').on('click',singUp)
-    $('#form-singUp').on('click',singUp)
-    $('#login').on('click',login)
-    $('#voltar-login').on('click',login)
+    $('#sing').on('click', singUp)
+    $('#form-singUp').on('click', singUp)
+    $('#login').on('click', login)
+    $('#voltar-login').on('click', login)
 
     $('#entrar').on('click', function () {
         event.preventDefault()
@@ -12,28 +12,21 @@ $(document).ready(function () {
             'senha': $('#inputPassword').val()
         }
         $.ajax({
-            url: '/',
+            url: '/logar',
             type: 'POST',
             data: data,
             complete: function (jqXHR, textStatus) {
-                if (!jqXHR.responseText.includes('erro')) {
-                    window.location = jqXHR.responseText
+                if (jqXHR.responseText.includes('Erro, login ou senha invalido!')) {
+                    $('#error').append('<div>Erro, login ou senha invalido!</div>')
                 } else {
-                    alert(jqXHR.responseText)
+                     window.location = jqXHR.responseText
                 }
             }
 
         })
     })
-
-    $('#novo-cadastro').on('click', function () {
-        window.location = 'registro'
-    })
-
-
-
-
     $('#cadastrar').on('click', function () {
+        event.preventDefault()
         if ($('#input-senha').val() != $('#input-resenha').val()) {
             alert('As senhas nao conferem!')
         } else if ($('#input-nome').val() == "") {
@@ -45,23 +38,26 @@ $(document).ready(function () {
             alert('O campo login não pode ficar em branco!')
         } else if ($('#input-senha').val() == "") {
             alert('O campo senha não pode ficar em branco!')
+        } else if ($('#input-cpf').val() == "") {
+            alert('O campo Cpf não pode ficar em branco!')
         }
         else {
             var data = {
                 'nome': $('#input-nome').val(),
                 'email': $('#input-email').val(),
                 'login': $('#input-login').val(),
-                'senha': $('#input-senha').val()
+                'senha': $('#input-senha').val(),
+                'cpf': $('#input-cpf').val()
             }
             $.ajax({
                 type: 'POST',
-                url: '/registro',
+                url: '/usuario/cadastrar',
                 data: data,
                 complete: function (jqXHR, textStatus) {
-                   if(jqXHR.responseJSON.rowCount>0){
+                    if (jqXHR.responseJSON.rowCount > 0) {
                      alert('Cadastro realizado com sucesso!')
-                     window.location='/'
-                   }else{
+                        window.location = '/'
+                    } else {
                        alert(jqXHR.responseText)
                    }
 
@@ -75,27 +71,27 @@ $(document).ready(function () {
 
 
   
-  const singUp = ()=>{
+const singUp = () => {
     $('#form-singUp').addClass('signup-button-active')
     $('#login').removeClass('login-button-active')
     $('#sing').hide();
-    setTimeout(aparecerLogin,500)
+    setTimeout(aparecerLogin, 500)
   }
   
-  const login =()=>{
+const login = () => {
     $('#login').addClass('login-button-active')
     $('#form-singUp').removeClass('signup-button-active')
     $('#log').html('')
     $('#voltar-login').hide();
-    setTimeout(aparecerSingUp,500)
+    setTimeout(aparecerSingUp, 500)
   
   }
   
-  const aparecerSingUp=()=>{
+const aparecerSingUp = () => {
     $('#sing').fadeIn(3000)
   }
   
-  const aparecerLogin = ()=>{
+const aparecerLogin = () => {
     $('#voltar-login').fadeIn(3000)
   }
   
