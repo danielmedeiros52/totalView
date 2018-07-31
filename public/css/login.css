@@ -466,7 +466,7 @@ input[type="submit"] {
   font-style: italic;
   transition: all 0.2s;
   height: 30px;
-top:52%;
+top:40%;
 cursor: pointer;
 -moz-transform: rotate(270deg);
 -o-transform: rotate(270deg);
@@ -484,7 +484,7 @@ z-index: 12;
   font-style: italic;
   transition: all 0.2s;
   height: 30px;
-top:52%;
+top:40%;
 cursor: pointer;
 -moz-transform: rotate(270deg);
 -o-transform: rotate(270deg);

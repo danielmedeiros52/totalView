@@ -17,6 +17,7 @@ $(document).ready(function () {
             data: data,
             complete: function (jqXHR, textStatus) {
                 if (jqXHR.responseText.includes('Erro, login ou senha invalido!')) {
+                    $('#error').html('')
                     $('#error').append('<div>Erro, login ou senha invalido!</div>')
                 } else {
                      window.location = jqXHR.responseText
@@ -98,6 +99,7 @@ const aparecerSingUp = () => {
   
 const aparecerLogin = () => {
     $('#voltar-login').fadeIn(3000)
+    
   }
   
   
