@@ -54,6 +54,11 @@ $(document).ready(function () {
                 url: '/usuario/cadastrar',
                 data: data,
                 complete: function (jqXHR, textStatus) {
+                    if (jqXHR.responseText.includes('existe !')) {
+                        $('#errorCadastro').html('')
+                        $('#errorCadastro').append('<div>',jqXHR.responseText,'</div>')
+                    }
+                   
                     if (jqXHR.responseJSON.rowCount > 0) {
                      alert('Cadastro realizado com sucesso!')
                         window.location = '/'

@@ -12,7 +12,7 @@ module.exports = function (app) {
         if (user.login.includes('@')) {
             user.email = user.login
             var data = [user.email]
-            UsuarioDAO.logarNome(data, (err, resultado) => {
+            UsuarioDAO.localizarEmail(data, (err, resultado) => {
                 if (err) {
                     res.send('Erro ao tentar logar!')
                 }
@@ -32,11 +32,10 @@ module.exports = function (app) {
         } else {
             user.nome = user.login
             var data = [user.nome]
-            UsuarioDAO.logarNome(data, (err, resultado) => {
+            UsuarioDAO.localizarNome(data, (err, resultado) => {
                 if (err) {
                     res.send('Erro ao tentar logar!')
                 }
-                console.log(resultado)
                 if (resultado.rowCount != 0) {
                     userDB = resultado.rows[0]
                     if (user.senha == userDB.senha) {
