@@ -1,16 +1,15 @@
+
 class UsuarioControler {
-    constructor() {
-        const pool = app.infra.connectionFactory()
-        let UsuarioDAO = new app.infra.UsuarioDAO(pool)
-    }
 
     cadastrar() {
 
     }
-    login(req) {
+    login(res,req,app) {
         let user = req.body
         let data = [user.email]
-       this. UsuarioDAO.localizarEmail([arg],(err,result)=>{
+        const pool = app.infra.connectionFactory()
+        let UsuarioDAO = new app.infra.UsuarioDAO(pool)
+       UsuarioDAO.localizarEmail(data,(err,result)=>{
             if(err){
                 console.log(err)
             }
@@ -25,6 +24,6 @@ class UsuarioControler {
     }
 
 }
-module.exports = function () {
+module.exports = function (app) {
     return UsuarioControler;
 }
