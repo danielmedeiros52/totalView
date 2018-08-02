@@ -1,10 +1,10 @@
 class Usuario {
     // id_usuario integer NOT NULL DEFAULT nextval('usuario_id_usuario_seq'::regclass),
-    //     nome character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    //     cpf character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    //     email character varying(30) COLLATE pg_catalog."default" NOT NULL,
-    //     senha character varying(13) COLLATE pg_catalog."default" NOT NULL,
-    //     matricula character varying(10) COLLATE pg_catalog."default",
+    //     nome character varying(20) NOT NULL,
+    //     cpf character varying(20) NOT NULL,
+    //     email character varying(30) NOT NULL,
+    //     senha character varying(13) NOT NULL,
+    //     matricula character varying(10) ,
     //     filial_id integer,
     //     cargo_id integer,
     //     jornada_id integer,
@@ -19,7 +19,7 @@ class Usuario {
         this._cargo = cargo;
         this._jornada = jornada;
         this._setor = setor;
-        Object.freeze();
+        Object.freeze(this);
     }
 
     get nome() {
@@ -49,4 +49,7 @@ class Usuario {
     get setor(){
         return this._setor
     }
+}
+module.exports = function(){
+    return Usuario;
 }

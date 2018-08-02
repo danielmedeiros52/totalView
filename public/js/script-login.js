@@ -8,7 +8,7 @@ $(document).ready(function () {
     $('#entrar').on('click', function () {
         event.preventDefault()
         var data = {
-            'login': $('#inputLogin').val(),
+            'email': $('#inputLogin').val(),
             'senha': $('#inputPassword').val()
         }
         $.ajax({

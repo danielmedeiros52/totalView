@@ -12,7 +12,7 @@ module.exports = function (app) {
         var UsuarioDAO = new app.infra.UsuarioDAO(pool)
         var user = req.body
         var userDB
-        if (user.login.includes('@')) {
+        if (user.email.includes('@')) {
             user.email = user.login
             var data = [user.email]
             UsuarioDAO.localizarEmail(data, (err, resultado) => {
