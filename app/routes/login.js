@@ -10,6 +10,8 @@ module.exports = function (app) {
     app.post('/logar', (req, res) => {
         const pool = app.infra.connectionFactory()
         var UsuarioDAO = new app.infra.UsuarioDAO(pool)
+
+        
         var user = req.body
         var userDB
         if (user.email.includes('@')) {
