@@ -16,7 +16,7 @@ $(document).ready(function () {
             type: 'POST',
             data: data,
             complete: function (jqXHR, textStatus) {
-                if (jqXHR.responseText.includes('Erro, login ou senha invalido!')) {
+                if (jqXHR.responseText.includes('login')) {
                     $('#error').html('')
                     $('#error').append('<div>Erro, login ou senha invalido!</div>')
                 } else {

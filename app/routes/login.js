@@ -8,8 +8,6 @@ module.exports = function (app) {
         }
     })
     app.post('/logar', (req, res) => {
-        const pool = app.infra.connectionFactory()
-        let UsuarioDAO = new app.infra.UsuarioDAO(pool)
         let UsuarioControler = new app.controlers.UsuarioControler()
         UsuarioControler.login(res,req,app)
 
