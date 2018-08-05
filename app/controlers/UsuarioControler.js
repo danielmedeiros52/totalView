@@ -23,7 +23,7 @@ class UsuarioControler {
         )
     }
     login(res, req, app) {
-        let dao = createConection(app)
+        let dao = createConection(app) 
         let user = req.body
         let data = [user.email]
         dao.localizarEmail(data, (err, result) => {
