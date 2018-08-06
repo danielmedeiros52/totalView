@@ -155,7 +155,22 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     height: 100%; 
   
     }
-  
+  .title-menu{
+    background-image: -moz-linear-gradient(top,#b8b0af 0%,#f2ecea 100%);
+background-image: -webkit-linear-gradient(top,#b8b0af 0%,#f2ecea 100%);
+background-image: -o-linear-gradient(top,#b8b0af 0%,#f2ecea 100%);
+background-image: -ms-linear-gradient(top,#b8b0af 0%,#f2ecea 100%);
+background-image: linear-gradient(top,#b8b0af 0%,#f2ecea 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+position:relative;font-size:1.2em;font-family: 'Yantramanav', sans-serif;font-weight:900;text-align: center;
+
+
+  }
+
+
+
+
   @font-face {
     font-family: "Titillium Web";
     font-style: normal;
