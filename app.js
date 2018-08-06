@@ -1,8 +1,9 @@
 const app = require("./config/express")()
+let $PORT = 3000
 
-app.listen(2000, err => {
+app.listen($PORT, err => {
   if(err){
     console.log(err)
   }
-  console.log("Server on...")
+  console.log("Server on... port: ",$PORT )
 })
