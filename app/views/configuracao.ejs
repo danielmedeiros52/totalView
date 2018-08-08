@@ -25,21 +25,21 @@
             </nav>
         </div>
         <div class="titulo-dados-pessoais">
-            <span class="title-menu">Dados Pessoais: </span>
+            <span class="title-menu">Seus Dados: </span>
         </div>
 
         <div class="container-form-dados-pessoais">
             <div class="row">
                 <div class="col-form">
-                    <input class="input-form" type="text" id="imputNome" placeholder="Nome Completo">
+                    <input class="input-form" type="text" id="imputNome" placeholder="Nome Completo" value="<%= user.nome %>">
                     <span class="focus-border"></span>
                 </div>
                 <div class="col-form">
-                    <input class="input-form" type="text" id="imputCpf" placeholder="CPF">
+                    <input class="input-form" type="text" id="imputCpf" placeholder="CPF" value="<%= user.cpf%>">
                     <span class="focus-border"></span>
                 </div>
                 <div class="col-form">
-                    <input class="input-form" type="text" id="imputMatricula" placeholder="Matricula">
+                    <input class="input-form" type="text" id="imputMatricula" placeholder="Matricula" value="<%= user.matricula %>">
                     <span class="focus-border"></span>
                 </div>
 
@@ -47,11 +47,11 @@
 
             <div class="row">
                 <div class="col-form">
-                    <input class="input-form" type="text" id="imputMatricula" placeholder="Dat. Nasc.:">
+                    <input class="input-form" type="text" id="imputMatricula" placeholder="Dat. Nasc.:" value="<%= user.nome %>">
                     <span class="focus-border"></span>
                 </div>
                 <div class="col-form">
-                        <input class="input-form" type="text" id="imputMatricula" placeholder="Email">
+                        <input class="input-form" type="text" id="imputMatricula" placeholder="Email"value="<%= user.email %>">
                         <span class="focus-border"></span>
                     </div>
             </div>
