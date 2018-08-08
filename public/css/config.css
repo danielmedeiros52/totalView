@@ -26,10 +26,11 @@
     -moz-border-radius: 22px 22px 22px 22px;
     -webkit-border-radius: 22px 22px 22px 22px;
     border: 0px solid #000000;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
+
+
 .titulo{
 
     font-size: 25px;
@@ -47,13 +48,35 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   left: 20%;
   top:10;
 }
-.container-form{
-  z-index: 3;
-  position: absolute;
+.container-form-dados-pessoais{
+  z-index: 1;
+  position: relative;
   left: 12%;
   top:16%;
   width: 85%;
+  border:0.1px #00000052 solid;
+  padding: 10px;
+  border-radius: 22px 22px 22px 22px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  
 }
+
+.titulo-dados-pessoais{
+  z-index: 4;
+  position: absolute;
+  left: 14%;
+  top: 13%;
+  -webkit-text-fill-color: transparent;
+  background: #212121;
+  /* background: #56aaf3; */
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1px 18px 1px 18px ;
+width: 170px;
+text-align: center;
+
+}
+
 .badge-Secondary {
   color: black;
 }
@@ -171,7 +194,7 @@ background-image: linear-gradient(top,#b8b0af 0%,#f2ecea 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 position:relative;font-size:1.2em;font-family: 'Yantramanav', sans-serif;font-weight:900;text-align: center;
-
+z-index: 10000;
 
   }
 
@@ -184,4 +207,16 @@ position:relative;font-size:1.2em;font-family: 'Yantramanav', sans-serif;font-we
     font-weight: 300;
     src: local("Titillium WebLight"), local("TitilliumWeb-Light"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format("woff");
   }
-  
+
+:focus{outline: none;}
+.col-form{float: left; width: 27.33%; margin: 40px 3%; position: relative;} /* necessary to give position: relative to parent. */
+input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+.input-form{border: 0; padding: 5px 4px 7px; border: 1px solid transparent; border-bottom-color: #ccc; transition: 0.4s;border-radius: 22px 22px 22px 22px;
+  -moz-border-radius: 22px 22px 22px 22px;
+  -webkit-border-radius: 22px 22px 22px 22px;}
+.input-formfocus{padding: 5px 14px 7px; transition: 0.4s;}
+.input-form ~ .focus-border{position: absolute; height: 36px; bottom: 0; right: 0; width: 0; transition: 0.4s;}
+.input-form:focus ~ .focus-border{width: 100%; transition: 0.4s; border: 2px solid #5fa1db;
+  border-radius: 22px 22px 22px 22px;
+  -moz-border-radius: 22px 22px 22px 22px;
+  -webkit-border-radius: 22px 22px 22px 22px;}
