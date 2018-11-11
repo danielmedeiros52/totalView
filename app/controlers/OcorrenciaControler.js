@@ -1,10 +1,10 @@
 class OcorrenciaControler{
 //  implementar métodos do controlsdor.
     Cadastrar(){
-        let html = req.body;
-        let data = [html.nome,html.descricao];
+        let ocorrenciaJson = req.body;
+        let data = [ocorrenciaJson.nome,ocorrenciaJson.descricao];
         
-        createConection(app).inserir(html.descricao,(err,result)=>{
+        createConection(app).inserir(ocorrenciaJson.descricao,(err,result)=>{
             if (result.rowCount != 0) {
                 res.send('Ocorrência já existe !');
             } else {
@@ -16,8 +16,8 @@ class OcorrenciaControler{
 
     update(){
 
-        let html = req.body;
-        let data = [html.nome,html.descricao];
+        let ocorrenciaJson = req.body;
+        let data = [ocorrenciaJson.nome,ocorrenciaJson.descricao];
         
         createConection(app).atualizar(html.id,(err,result)=>{
             if (result.rowCount == 0) {
