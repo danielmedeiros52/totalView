@@ -6,6 +6,7 @@ module.exports = function (app) {
 
 
         let JornadaController = new app.Controller.JornadaController()
+        console.log(req);
         JornadaController.registrar(res, req, app)
     })
 
