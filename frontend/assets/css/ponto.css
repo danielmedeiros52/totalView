@@ -5,24 +5,16 @@
 	border: 0;
 	outline: 0;
 }
-.config{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-	padding: 0;
-    position:absolute;
-    top:0;
-    z-index: 1;
-}
+
 .box  {
     background: #FFFFFF;
     height: 10%;
     width: 100%;
-    position:relative;
-    top:40%;
+    position:absolute;
     z-index: 2;
     border: 0px solid #000000;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top:40%;
 
 }
 
@@ -68,16 +60,45 @@ background-image: linear-gradient(top,#b8b0af 0%,#f2ecea 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 position:absolute;
+font-size:1em;
+font-family: 'Yantramanav', sans-serif;
+font-weight:900;
+z-index: 10000;
+    width: 172px;
+    margin-top:6px;
+    margin-left:100px;
+
+  }
+
+  .title-menu-item{
+    background-image: -moz-linear-gradient(top,#6abbba 0%,#d5e7ee 100%);
+background-image: -webkit-linear-gradient(top,#6abbba 0%,#d5e7ee 100%);
+background-image: -o-linear-gradient(top,#6abbba 0%,#d5e7ee 100%);
+background-image: -ms-linear-gradient(top,#6abbba 0%,#d5e7ee 100%);
+background-image: linear-gradient(top,#6abbba 0%,#d5e7ee 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+position:absolute;
 font-size:1.2em;
 font-family: 'Yantramanav', sans-serif;
 font-weight:900;
 z-index: 10000;
     width: 172px;
     margin-top:20px;
-    margin-left:100px;
+   
 
   }
+.entrada{
+ margin-left:390px;
+}
+.intervalo{
+ margin-left:690px;
 
+}
+.saida{
+ margin-left:990px;
+
+}
 
 
 
