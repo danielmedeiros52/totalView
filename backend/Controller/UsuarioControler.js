@@ -12,7 +12,7 @@ class UsuarioControler {
                     if (result.rowCount != 0) {
                         res.send('Usuário já existe !')
                     } else {
-                        inserir(res,data, createConection(app))
+                        inserir(res, data, createConection(app))
                     }
                 })
             }
@@ -47,7 +47,7 @@ class UsuarioControler {
     }
 
 }
-function inserir(res,data, dao) {
+function inserir(res, data, dao) {
     dao.inserir(data, (err, resultado) => {
         if (err) {
             res.send(err)
@@ -56,8 +56,8 @@ function inserir(res,data, dao) {
     })
 }
 function createConection(app) {
-    const pool = app.infra.connectionFactory()
-    let UsuarioDAO = new app.infra.UsuarioDAO(pool)
+    const pool = app.tools.connectionFactory()
+    let UsuarioDAO = new app.tools.UsuarioDAO(pool)
     return UsuarioDAO
 }
 module.exports = function (app) {
