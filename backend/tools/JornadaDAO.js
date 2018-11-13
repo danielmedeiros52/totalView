@@ -4,22 +4,24 @@ class JornadaDAO {
     constructor(connection) {
         this._connection = connection;
     }
-    registrarPonto() {
-        this._connection.query('INSERT INTO jornada_efetuada_dia (nome,descricao) VALUES ($1,$2)', data, callback);
+    registrarPontoChegada(data, callback) {
+        this._connection.query(`INSERT INTO jornada_efetuada_dia (usuario_id,hora_chegada_jornada,jornada_em) 
+                                VALUES ($1,now()::timestamp,now()::timestamp)`, data, callback);
+    }
+
+    atualizarPonto(data, jornada, callback) {
+
+        this._connection.query(`INSERT INTO jornada_efetuada_dia (${jornada}) 
+                                VALUES (now()::timestamp) where usuario_id =$1 and  `)
 
     }
-    localizarNome(data, callback) {
-        this._connection.query('SELECT * FROM usuario WHERE  nome ILIKE  $1', data, callback);
+    retornaJornada(data, callback) {
+        this._connection.query(`SELECT * FROM jornada_efetuada_dia  
+                                WHERE usuario_id=$1 AND jornada_em::date = current_date`, data, callback)
+
     }
-    localizarEmail(data, callback) {
-        this._connection.query('SELECT * FROM usuario WHERE  email ILIKE  $1', data, callback);
-    }
-    localizarCpf(data, callback) {
-        this._connection.query('SELECT * FROM usuario WHERE  cpf =  $1', data, callback);
-    }
-    localizarMatricula(data, callback) {
-        this._connection.query('SELECT * FROM usuario WHERE  matricula ILIKE  $1', data, callback);
-    }
+
+
 }
 
 

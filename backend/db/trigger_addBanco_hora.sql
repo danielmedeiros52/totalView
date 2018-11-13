@@ -12,4 +12,7 @@ $BODY$
 LANGUAGE plpgsql  VOLATILE
 COST 100;
 
---DROP TRIGGER IF EXISTS cria_banco_hora ON usuario;
+
+-- 	CREATE TRIGGER cria_banco
+-- AFTER INSERT ON usuario
+--     FOR EACH ROW EXECUTE PROCEDURE cria_banco_hora();
