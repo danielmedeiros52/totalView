@@ -18,9 +18,9 @@ module.exports = function () {
 
 
     load('routes', { cwd: 'backend' })
-        .then('infra')
-        .then('controlers')
-        .then('models')
+        .then('tools')
+        .then('Controller')
+        .then('model')
         .into(app)
 
     return app

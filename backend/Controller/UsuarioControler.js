@@ -4,7 +4,6 @@ class UsuarioControler {
         let user = req.body
         let data = [user.nome, user.senha, user.email, user.cpf]
         createConection(app).localizarEmail([user.email], (err, result) => {
-
             if (result.rowCount != 0) {
                 res.send('Usuário já existe !')
             } else {

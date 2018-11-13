@@ -245,3 +245,13 @@ ul {
         font-weight: bold;
         font-size: 16px;
     }
+input[type="submit"] {
+	float: right;
+	width: 120px;
+	margin-top: 30px;
+	line-height: 40px;
+	font-size: 18px;
+    border-radius: 20px;
+    cursor:pointer;
+}
+
