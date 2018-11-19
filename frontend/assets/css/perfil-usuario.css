@@ -245,17 +245,6 @@ ul {
         font-weight: bold;
         font-size: 16px;
     }
-input[type="submit"] {
-	float: right;
-	width: 120px;
-	margin-top: 16px;
-	line-height: 40px;
-	font-size: 15px;
-    border-radius: 20px;
-font-weight:900;
- margin-left:1300px;
-
-}
 .registro{
     
 color:#FFFF;
@@ -263,5 +252,13 @@ color:#FFFF;
 background-color: cadetblue; 
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 font-family: 'Yantramanav', sans-serif;
+float: right;
+	width: 120px;
+	margin-top: 16px;
+	line-height: 40px;
+	font-size: 15px;
+    border-radius: 20px;
+font-weight:900;
+ margin-left:1300px;
 
 }

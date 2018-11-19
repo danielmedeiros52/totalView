@@ -1,5 +1,9 @@
 $(document).ready(function () {
-    $('#registrar-ponto').on('click', function () {
+
+
+
+
+    $('#registrar-ponto').click(function (event) {
         event.preventDefault()
         //envia requisicao para o servidor registrar o ponto do usuario que esta logado.
         var data = {
@@ -10,13 +14,15 @@ $(document).ready(function () {
             type: 'POST',
             data: data,
             complete: function (jqXHR, textStatus) {
-                if (jqXHR.responseText.includes('error')) {
-                    alert('Erro ao registrar ponto!')
+                if (jqXHR.responseText.includes('expirou')) {
+                    alert('Sua sessão expirou, favor faça login novamente.')
+                    window.location.reload();
                 } else {
-                    window.location = jqXHR.responseText
+                    atulalizaRegistroPonto(jqXHR.responseJSON)
+
+
                 }
             }
-
         })
 
 
@@ -24,3 +30,16 @@ $(document).ready(function () {
 
     })
 })
+
+function atulalizaRegistroPonto(json) {
+    console.log(json)
+    let date, hours, minutes
+    if (json.hora_chegada_jornada !== '') {
+        date = new Date(json.hora_chegada_jornada);
+        hours = date.getHours()
+        minutes = date.getMinutes()
+        $('#id-hora-inicio').text(`${hours}:${minutes}`)
+    }
+
+
+}

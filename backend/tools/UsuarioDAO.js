@@ -17,9 +17,13 @@ class UsuarioDAO {
     localizarMatricula(data, callback) {
         this._connection.query('SELECT * FROM usuario WHERE  matricula ILIKE  $1', data, callback);
     }
+    carregarUsuario(data, callback) {
+        this._connection.query('select * from  user_view WHERE hora_chegada_jornada::date = current_date  AND id_usuario = $1', data, callback);
+    }
+
 }
 
 
-module.exports = function(){
+module.exports = function () {
     return UsuarioDAO;
 }

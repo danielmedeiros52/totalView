@@ -1,5 +1,6 @@
 
 module.exports = function (app) {
+
     app.get('/', (req, res) => {
         if (req.session.user == null) {
             res.render('login')

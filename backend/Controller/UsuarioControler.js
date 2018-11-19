@@ -1,5 +1,5 @@
-
 class UsuarioControler {
+
     cadastrar(res, req, app) {
         let user = req.body
         let data = [user.nome, user.senha, user.email, user.cpf]
@@ -15,10 +15,7 @@ class UsuarioControler {
                     }
                 })
             }
-        }
-
-
-        )
+        })
     }
     login(res, req, app) {
         let user = req.body
@@ -34,15 +31,10 @@ class UsuarioControler {
                 } else {
                     res.send('login ou senha invalidos')
                 }
-
-
-
             } else {
                 res.send('login ou senha invalidos')
             }
-
         })
-
     }
 
 }

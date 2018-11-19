@@ -10,11 +10,9 @@ class JornadaController {
                 if (result.rowCount === 0) {
                     res.send('Erro ao registrar ponto')
                 } else {
-                    createConection(app).retornaJornada(data, (err, reult) => {
-                        console.log('>>>>>>>' + result.rows[0]);
 
-
-                        res.send(result.rows[0].senha)
+                    createConection(app).retornaJornada([req.session.user.id_usuario], (err, result) => {
+                        res.send(result.rows[0])
                     })
 
 
