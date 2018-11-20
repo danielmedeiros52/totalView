@@ -1,11 +1,12 @@
 class JornadaController {
 
     registrar(res, req, app) {
-        let bodyResponse = req.body
+        let bodyRequest = req.body
+        console.log(bodyRequest);
 
-        let data = [bodyResponse.horachegada, req.session.user]
+        let data = [bodyRequest.horachegada, req.session.user]
 
-        if (bodyResponse.horachegada === '') {
+        if (bodyRequest.horachegada === '') {
             createConection(app).registrarPontoChegada([req.session.user.id_usuario], (err, result) => {
                 if (result.rowCount === 0) {
                     res.send('Erro ao registrar ponto')
@@ -14,20 +15,35 @@ class JornadaController {
                     createConection(app).retornaJornada([req.session.user.id_usuario], (err, result) => {
                         res.send(result.rows[0])
                     })
-
-
                 }
             })
         } else {
-            createConection(app).atualizarPonto()
+            createConection(app).atualizarJornadaDia([req.session.user.id_usuario], bodyRequest.pxjornada, (err, result) => {
+                if (err) {
+                    console.log('ERRORR JORNADA CONTROLLER >>>>>>', err)
+
+
+                }
+                if (result.rowCount === 0) {
+                    res.send('Erro ao registrar ponto')
+                } else {
+
+                    createConection(app).retornaJornada([req.session.user.id_usuario], (err, result) => {
+                        res.send(result.rows[0])
+                    })
+                }
+
+            })
         }
-
-
-
-
     }
 
-
+    carregarJornada(req, res, app) {
+        createConection(app).carregaJornada([req.session.user.id_usuario], (err, result) => {
+            if (result.rowCount !== 0) {
+                res.send(result.rows[0])
+            }
+        })
+    }
 }
 
 

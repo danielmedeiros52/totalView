@@ -10,6 +10,7 @@ module.exports = function (app) {
             res.render('error/error')
         } else {
             res.locals.user = req.session.user
+
             next()
         }
     })

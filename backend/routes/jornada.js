@@ -5,7 +5,6 @@ module.exports = function (app) {
         if (!req.session.user) {
             res.send('Sua sessão expirou , favor faça login novamente.')
         } else {
-            console.log('res >>>>>', res)
             next()
         }
     })
@@ -16,7 +15,11 @@ module.exports = function (app) {
         JornadaController.registrar(res, req, app)
     })
 
+    app.get('/carregarJornada', (req, res) => {
+        let JornadaController = new app.Controller.JornadaController()
+        JornadaController.carregarJornada(req, res, app)
 
+    })
 
 
 }

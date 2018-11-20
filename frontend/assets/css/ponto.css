@@ -79,11 +79,11 @@ background-image: linear-gradient(top,#6abbba 0%,#d5e7ee 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 position:absolute;
-font-size:1.2em;
+font-size:1em;
 font-family: 'Yantramanav', sans-serif;
 font-weight:900;
 z-index: 10000;
-    width: 172px;
+    width: 257px;
     margin-top:20px;
    
 
@@ -99,7 +99,7 @@ z-index: 10000;
  margin-left:990px;
 
 }
-.hora{padding-left:120px;}
+.hora{padding-left:84px;}
 
 
   @font-face {

@@ -9,10 +9,11 @@ class JornadaDAO {
                                 VALUES ($1,now()::timestamp,now()::timestamp)`, data, callback);
     }
 
-    atualizarPonto(data, jornada, callback) {
+    atualizarJornadaDia(data, jornada, callback) {
 
-        this._connection.query(`INSERT INTO jornada_efetuada_dia (${jornada}) 
-                                VALUES (now()::timestamp) where usuario_id =$1 AND  jornada_em::date = current_date `, data, callback)
+        this._connection.query(`UPDATE jornada_efetuada_dia 
+			                    	SET ${jornada}= now()::timestamp 
+			                            	where usuario_id =$1 AND  jornada_em::date = current_date`, data, callback)
 
     }
     retornaJornada(data, callback) {
@@ -20,6 +21,14 @@ class JornadaDAO {
                                 WHERE usuario_id=$1 AND jornada_em::date = current_date`, data, callback)
 
     }
+
+    carregaJornada(data, callback) {
+        this._connection.query(`SELECT * FROM user_view 
+                                WHERE id_usuario =$1 AND hora_chegada_jornada::date = current_date `, data, callback)
+
+
+    }
+
 
 
 }
